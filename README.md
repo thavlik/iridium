@@ -16,4 +16,4 @@ Iridium (working title) is a platform-agnostic, general-purpose GUI framework wi
     - Less coding, more doing!
 - Licensed permissibly (currently MIT)
 
-Head on over to the [wiki](https://github.com/thavlik/iridium/wiki) for more info!
+Head on over to the [**wiki**](https://github.com/thavlik/iridium/wiki) for more info!
