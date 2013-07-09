@@ -7,6 +7,7 @@ Iridium (working title) is a platform-agnostic, general-purpose GUI framework wi
     - Windows, Mac, Linux, iOS, all of them!
     - **Video game GUIs** (menus, HUDs, etc.)
 - Being both fast and scaleable during runtime.
+    - Behavior backend written in C++ 
     - Multithreaded rendering
     - Hardware acceleration w/ OpenGL
 - Logically (and cleanly) separating data, behavior, and presentation.
