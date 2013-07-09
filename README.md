@@ -3,16 +3,17 @@ Iridium UI
 
 Overview:
 
-Iridium (working title) is a platform-agnostic general purpose GUI framework with the goals of:
+Iridium (working title) is a platform-agnostic, general-purpose GUI framework with the goals of:
 
 - Providing a rich user experience across all platforms.
     - Windows, Mac, Linux, iOS, all of them!
     - **Video game GUIs** (menus, HUDs, etc.)
-- Fast and scaleable execution, while reducing runtime memory allocation.
+- Being both fast and scaleable during runtime.
     - Multithreaded rendering
     - Hardware acceleration w/ OpenGL
-- Logical and clean separation between data, behavior, and presentation.
+- Logically (and cleanly) separating data, behavior, and presentation.
     - MVVM-like architecture means more doing, less coding.
-- Intuitive frontend tools for designers and a simplistic C++ backend for programmers.
+- Allowing designers to have access to intuitive frontend tools.
+    - Less coding, more doing!
 
-
+The project is currently **licensed under MIT**. This license is also negotiable.
