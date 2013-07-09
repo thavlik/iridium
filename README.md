@@ -14,6 +14,6 @@ Iridium (working title) is a platform-agnostic, general-purpose GUI framework wi
     - MVVM-like architecture means more doing, less coding.
 - Allowing designers to have access to intuitive frontend tools.
     - Less coding, more doing!
+- Licensed permissibly (currently MIT)
 
-The project is currently **licensed under MIT**. This license is also negotiable.
-
+Head on over to the [wiki](https://github.com/thavlik/iridium/wiki) for more info!
