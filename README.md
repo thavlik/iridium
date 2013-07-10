@@ -4,6 +4,7 @@ Iridium UI
 Iridium (working title) is a platform-agnostic, general-purpose GUI framework with the goals of:
 
 - Providing a rich user experience across all platforms.
+    - Animations, blurs, blending, etc.
     - Windows, Mac, Linux, iOS, all of them!
     - **Video game GUIs** (menus, HUDs, etc.)
 - Being both fast and scaleable during runtime.
