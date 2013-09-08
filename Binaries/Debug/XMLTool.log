@@ -1,0 +1,12 @@
+﻿Build started 7/18/2013 1:22:33 PM.
+     1>Project "C:\bin\src\Iridium\Projects\XMLTool.vcxproj" on node 5 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "C:\bin\src\Iridium\Binaries\Debug\XMLTool.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       FinalizeBuildStatus:
+         Deleting file "C:\bin\src\Iridium\Binaries\Debug\XMLTool.unsuccessfulbuild".
+         Touching "C:\bin\src\Iridium\Binaries\Debug\XMLTool.lastbuildstate".
+     1>Done Building Project "C:\bin\src\Iridium\Projects\XMLTool.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.03

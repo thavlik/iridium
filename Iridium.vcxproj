@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Common\BoundingBox.h" />
+    <ClInclude Include="Source\Common\Color.h" />
+    <ClInclude Include="Source\Common\LinkedList.h" />
+    <ClInclude Include="Source\Common\Metric.h" />
+    <ClInclude Include="Source\Common\StringHash.h" />
+    <ClInclude Include="Source\Common\Timer.h" />
+    <ClInclude Include="Source\Common\Vectors.h" />
+    <ClInclude Include="Source\Common\WindowHelper.h" />
+    <ClInclude Include="Source\Core\Application.h" />
+    <ClInclude Include="Source\Core\Binding.h" />
+    <ClInclude Include="Source\Core\Brush.h" />
+    <ClInclude Include="Source\Core\Button.h" />
+    <ClInclude Include="Source\Core\Element.h" />
+    <ClInclude Include="Source\Core\Ellipse.h" />
+    <ClInclude Include="Source\Core\FontFamily.h" />
+    <ClInclude Include="Source\Core\FontManager.h" />
+    <ClInclude Include="Source\Core\Path.h" />
+    <ClInclude Include="Source\Core\Properties.h" />
+    <ClInclude Include="Source\Core\Properties\BrushProperty.h" />
+    <ClInclude Include="Source\Core\Properties\ColorProperty.h" />
+    <ClInclude Include="Source\Core\Properties\ContentProperty.h" />
+    <ClInclude Include="Source\Core\Control.h" />
+    <ClInclude Include="Source\Core\ControlTemplate.h" />
+    <ClInclude Include="Source\Core\DependencyObject.h" />
+    <ClInclude Include="Source\Core\DropShadowEffect.h" />
+    <ClInclude Include="Source\Core\Effect.h" />
+    <ClInclude Include="Source\Core\EffectsProperty.h" />
+    <ClInclude Include="Source\Core\Event.h" />
+    <ClInclude Include="Source\Core\EventObject.h" />
+    <ClInclude Include="Source\Core\GaussianBlurEffect.h" />
+    <ClInclude Include="Source\Core\MouseEventObject.h" />
+    <ClInclude Include="Source\Core\Object.h" />
+    <ClInclude Include="Source\Core\Properties\FloatProperty.h" />
+    <ClInclude Include="Source\Core\Properties\FontProperty.h" />
+    <ClInclude Include="Source\Core\Properties\IntProperty.h" />
+    <ClInclude Include="Source\Core\Properties\MarginProperty.h" />
+    <ClInclude Include="Source\Core\Properties\MetricProperty.h" />
+    <ClInclude Include="Source\Core\Properties\Property.h" />
+    <ClInclude Include="Source\Core\Properties\Vec2Property.h" />
+    <ClInclude Include="Source\Core\Properties\Vec3Property.h" />
+    <ClInclude Include="Source\Core\Properties\Vec4Property.h" />
+    <ClInclude Include="Source\Core\Rectangle.h" />
+    <ClInclude Include="Source\Core\Setter.h" />
+    <ClInclude Include="Source\Core\Properties\StringProperty.h" />
+    <ClInclude Include="Source\Core\Shape.h" />
+    <ClInclude Include="Source\Core\Target.h" />
+    <ClInclude Include="Source\Core\Text.h" />
+    <ClInclude Include="Source\Core\Trigger.h" />
+    <ClInclude Include="Source\Core\TriggerAction.h" />
+    <ClInclude Include="Source\Core\Window.h" />
+    <ClInclude Include="Source\Presentation\BasicShape.h" />
+    <ClInclude Include="Source\Presentation\LayoutEngine.h" />
+    <ClInclude Include="Source\Presentation\Visual.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Common\StringHash.cpp" />
+    <ClCompile Include="Source\Common\WindowHelper.cpp" />
+    <ClCompile Include="Source\Core\Application.cpp" />
+    <ClCompile Include="Source\Core\Binding.cpp" />
+    <ClCompile Include="Source\Core\Button.cpp" />
+    <ClCompile Include="Source\Core\Element.cpp" />
+    <ClCompile Include="Source\Core\FontFamily.cpp" />
+    <ClCompile Include="Source\Core\FontManager.cpp" />
+    <ClCompile Include="Source\Core\Properties\ContentProperty.cpp" />
+    <ClCompile Include="Source\Core\Control.cpp" />
+    <ClCompile Include="Source\Core\ControlTemplate.cpp" />
+    <ClCompile Include="Source\Core\Object.cpp" />
+    <ClCompile Include="Source\Core\Properties\FontProperty.cpp" />
+    <ClCompile Include="Source\Core\Properties\MarginProperty.cpp" />
+    <ClCompile Include="Source\Core\Properties\StringProperty.cpp" />
+    <ClCompile Include="Source\Core\Text.cpp" />
+    <ClCompile Include="Source\Core\Window.cpp" />
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Presentation\LayoutEngine.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{90258F56-BFAE-49EF-BF12-0B5C1018EEB3}</ProjectGuid>
+    <RootNamespace>XMLConverter</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Binaries\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)_debug</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

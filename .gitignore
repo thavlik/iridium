@@ -1,0 +1,4 @@
+Binaries/*
+*.vcxproj.user
+*.sdf
+*.suo

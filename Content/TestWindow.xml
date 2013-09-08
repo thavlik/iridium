@@ -1,0 +1,20 @@
+﻿<Window>
+  <Window.Resources>
+    <Style TargetType="Button">
+      <Setter Property="Template">
+        <Setter.Value>
+          <ControlTemplate TargetType="Button">
+            <Border Background="{TemplateBinding Background}" Stroke="{TemplateBinding BorderBrush}">
+              <ContentPresenter/>
+            </Border>
+          </ControlTemplate>
+        </Setter.Value>
+      </Setter>
+    </Style>
+  </Window.Resources>
+  <Button Name="MyButton">
+    My button!
+  </Button>
+  <Button Name="MyOtherButton" Content="{Binding MyCustomBinding}">
+  </Button>
+</Window>
