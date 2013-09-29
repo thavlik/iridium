@@ -7,11 +7,10 @@ namespace Ir {
 	public:
 		Text(Object* parent);
 
-		FontProperty Font;
+	public:		
 		StringProperty Content;
 
-		virtual void UpdateVisual(LayoutEngine* engine) const;
-
-	private:
+	public:
+		void RequestSize(Measure& width, Measure& height) const;
 	};
 }

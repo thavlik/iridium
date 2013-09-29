@@ -2,8 +2,7 @@
 
 #include "Object.h"
 
-namespace Ir
-{
+namespace Ir {
 	class Effect : public Object {
 	public:
 		Effect(Object* parent)

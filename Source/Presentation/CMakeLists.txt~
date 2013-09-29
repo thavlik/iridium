@@ -1,0 +1,6 @@
+add_library(IrEntry main.cpp)
+
+add_subdirectory (Common)
+add_subdirectory (Core)
+add_subdirectory (Presentation)
+add_subdirectory (Tools)

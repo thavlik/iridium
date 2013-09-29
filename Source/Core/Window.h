@@ -10,6 +10,12 @@ namespace Ir {
 
 	public:
 		StringProperty Title;
+
 		IntProperty X, Y;
+
+	protected:
+		virtual void MeasureVisual(Visual&) const { }
+
+		virtual void ArrangeVisual(Visual&) const { }
 	};
 }

@@ -4,5 +4,14 @@
 #include "../../Common/Vectors.h"
 
 namespace Ir {
-	typedef ValueProperty<vec3f> Vec3Property;
+	class Vec3Property : public Property {
+	public:
+		FloatProperty X, Y, Z;
+
+		Vec3Property() {
+			OBJECT_PROPERTY( X );
+			OBJECT_PROPERTY( Y );
+			OBJECT_PROPERTY( Z );
+		}
+	};
 }

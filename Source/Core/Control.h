@@ -12,17 +12,33 @@ namespace Ir {
 
 	public:
 		StringProperty Name, Style;
+
 		BrushProperty FillBrush, BorderBrush;
-		MarginProperty Padding, Margin, BorderThickness;		
-		MetricProperty Width, MinWidth, MaxWidth;
-		MetricProperty Height, MinHeight, MaxHeight;
+
+		MarginProperty Padding, Margin, BorderThickness;
+
+		MetricProperty MinWidth, MaxWidth, Width;
+
+		MetricProperty MinHeight, MaxHeight, Height;
+
 		ContentProperty Content;
+
 		FloatProperty Opacity;
 
+		GeometryProperty Clip;
+
+		VisibilityProperty Visibility;
+
+		TransformProperty LayoutTransform, RenderTransform;
+
+	public:
 		Event<>
 			OnKeyDown, OnKeyUp,
 			OnFocus, OnBlur;
 
-		virtual void UpdateVisual(LayoutEngine* engine) const;
+	public:
+		virtual void RequestSize(Measure& width, Measure& height) const;
+
+	private:
 	};
 }

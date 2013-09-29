@@ -1,8 +1,8 @@
 #pragma once
 
 #include "../Common/Color.h"
-#include "Object.h"
-#include "Property.h"
+#include "DependencyObject.h"
+#include "Properties.h"
 
 namespace Ir
 {
@@ -14,18 +14,16 @@ namespace Ir
 	/// instanced by-value.
 	///
 	//////////////////////////////////////////////////////////////////////////
-	class GradientStop : public Object
+	class GradientStop : public DependencyObject
 	{
 	public:
 		FloatProperty Offset;
 		ColorProperty Color;
 
 	public:
-		GradientStop()
-			: Object(nullptr)
-		{
-			INIT_PROPERTY( Offset );
-			INIT_PROPERTY( Color );
+		GradientStop() {
+			OBJECT_PROPERTY( Offset );
+			OBJECT_PROPERTY( Color );
 		}
 	};
 
@@ -36,15 +34,16 @@ namespace Ir
 	/// Base class for all brush objects. 
 	///
 	//////////////////////////////////////////////////////////////////////////
-	class Brush : public Object {
+	class Brush
+		: public Object
+		, public DependencyObject {
 	public:
 		FloatProperty Opacity;
 
 	protected:
 		Brush(Object* parent)
-			: Object(parent)
-		{
-			INIT_PROPERTY( Opacity );
+			: Object(parent) {
+			OBJECT_PROPERTY( Opacity );
 		}
 	};
 
@@ -59,9 +58,8 @@ namespace Ir
 
 	public:
 		SolidColorBrush(Object* parent)
-			: Brush(parent)
-		{
-			INIT_PROPERTY( Color );
+			: Brush(parent) {
+			OBJECT_PROPERTY( Color );
 		}
 	};
 
@@ -72,16 +70,15 @@ namespace Ir
 	//////////////////////////////////////////////////////////////////////////
 	class LinearGradientBrush : public Brush {
 	public:
-		ArrayProperty<GradientStop> Stops;
-		Float2Property EndPoint, StartPoint;
+		//ArrayProperty<GradientStop> Stops;
+		Vec2Property EndPoint, StartPoint;
 
 	public:
 		LinearGradientBrush(Object* parent)
-			: Brush(parent)
-		{
-			INIT_PROPERTY( Stops );
-			INIT_PROPERTY( EndPoint );
-			INIT_PROPERTY( StartPoint );
+			: Brush(parent) {
+			//OBJECT_PROPERTY( Stops );
+			OBJECT_PROPERTY( EndPoint );
+			OBJECT_PROPERTY( StartPoint );
 		}
 	};
 
@@ -92,16 +89,15 @@ namespace Ir
 	//////////////////////////////////////////////////////////////////////////
 	class RadialGradientBrush : public Brush {
 	public:
-		ArrayProperty<GradientStop> Stops;
-		Float2Property Center, Radius;
+		//ArrayProperty<GradientStop> Stops;
+		Vec2Property Center, Radius;
 
 	public:
 		RadialGradientBrush(Object* parent)
-			: Brush(parent)
-		{
-			INIT_PROPERTY( Stops );
-			INIT_PROPERTY( Center );
-			INIT_PROPERTY( Radius );
+			: Brush(parent) {
+			//OBJECT_PROPERTY( Stops );
+			OBJECT_PROPERTY( Center );
+			OBJECT_PROPERTY( Radius );
 		}
 	};
 }

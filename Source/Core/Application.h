@@ -25,6 +25,8 @@ namespace Ir
 	public:
 		bool getExit() const { return _exit; }
 
+		WindowHelper& getWindow() { return _window; }
+
 	private:
 		bool _exit;
 

@@ -6,8 +6,7 @@
 #include "../Event.h"
 #include "../Object.h"
 
-namespace Ir
-{
+namespace Ir {
 	class Object;
 	class Control;
 	class Brush;
@@ -20,16 +19,13 @@ namespace Ir
 	/// with (always) a null parent. Properties are to be instanced on the stack.
 	///
 	//////////////////////////////////////////////////////////////////////////
-	class Property {
-		friend class Object;
+	class Property : public DependencyObject {
+		friend class DependencyObject;
 	public:
 		virtual ~Property() { }
 
 	public:
 		Event<Property*> OnChanged;
-
-		Object const* getParent() const { return _parent; }
-		Object* getParent() { return _parent; }
 
 		const char* getName() const { return _name; }
 
@@ -37,12 +33,9 @@ namespace Ir
 
 	protected:
 		Property()
-			: _parent(nullptr)
-			, _name(nullptr) { }
+			: _name(nullptr) { }
 
-	private:
-		Object* _parent;
-		
+	private:		
 		const char* _name;
 
 		StringHash _nameHash;
@@ -54,7 +47,9 @@ namespace Ir
 		ValueProperty(const T& val = T())
 			: _value(val) { }
 
-		operator T() const { return _value; }
+		operator const T() const { return _value; }
+
+		operator T() { return _value; }
 
 		ValueProperty<T>& operator=(const T& v) { _value = v; OnChanged(this); return *this; }
 

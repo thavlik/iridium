@@ -5,6 +5,12 @@
 namespace Ir {
 	class Shape : public Control {
 	public:
-	private:
+		Shape(Object* parent);
+
+	public:
+		GeometryProperty RendererdGeometry;
+
+	public:
+		virtual void Draw(Renderer*) const;
 	};
 }

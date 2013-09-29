@@ -1,0 +1,13 @@
+add_library(IrCore Application.cpp)
+add_library(IrCore Binding.cpp)
+add_library(IrCore Button.cpp)
+add_library(IrCore Control.cpp)
+add_library(IrCore ControlTemplate.cpp)
+add_library(IrCore Element.cpp)
+add_library(IrCore FontFamily.cpp)
+add_library(IrCore FontManager.cpp)
+add_library(IrCore Object.cpp)
+add_library(IrCore Text.cpp)
+add_library(IrCore Window.cpp)
+
+add_subdirectory (Properties)

@@ -68,7 +68,7 @@ namespace Ir {
 				float TopRight, BottomRight, BottomLeft, TopLeft;
 			} CornerRadius;
 
-			float Transform[9];
+			float LayoutTransform[9], RenderTransform[9];
 		};
 
 		struct Shape {

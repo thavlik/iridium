@@ -23,14 +23,22 @@
     <ClInclude Include="Source\Core\Binding.h" />
     <ClInclude Include="Source\Core\Brush.h" />
     <ClInclude Include="Source\Core\Button.h" />
+    <ClInclude Include="Source\Core\CairoRenderer.h" />
+    <ClInclude Include="Source\Core\CombinedGeometry.h" />
     <ClInclude Include="Source\Core\Element.h" />
     <ClInclude Include="Source\Core\Ellipse.h" />
+    <ClInclude Include="Source\Core\EllipseGeometry.h" />
     <ClInclude Include="Source\Core\FontFamily.h" />
     <ClInclude Include="Source\Core\FontManager.h" />
+    <ClInclude Include="Source\Core\Geometry.h" />
+    <ClInclude Include="Source\Core\LineGeometry.h" />
+    <ClInclude Include="Source\Core\Measure.h" />
     <ClInclude Include="Source\Core\Path.h" />
+    <ClInclude Include="Source\Core\PathGeometry.h" />
     <ClInclude Include="Source\Core\Properties.h" />
     <ClInclude Include="Source\Core\Properties\BrushProperty.h" />
     <ClInclude Include="Source\Core\Properties\ColorProperty.h" />
+    <ClInclude Include="Source\Core\Properties\CombineModeProperty.h" />
     <ClInclude Include="Source\Core\Properties\ContentProperty.h" />
     <ClInclude Include="Source\Core\Control.h" />
     <ClInclude Include="Source\Core\ControlTemplate.h" />
@@ -45,14 +53,19 @@
     <ClInclude Include="Source\Core\Object.h" />
     <ClInclude Include="Source\Core\Properties\FloatProperty.h" />
     <ClInclude Include="Source\Core\Properties\FontProperty.h" />
+    <ClInclude Include="Source\Core\Properties\GeometryProperty.h" />
     <ClInclude Include="Source\Core\Properties\IntProperty.h" />
     <ClInclude Include="Source\Core\Properties\MarginProperty.h" />
     <ClInclude Include="Source\Core\Properties\MetricProperty.h" />
     <ClInclude Include="Source\Core\Properties\Property.h" />
+    <ClInclude Include="Source\Core\Properties\TransformProperty.h" />
     <ClInclude Include="Source\Core\Properties\Vec2Property.h" />
     <ClInclude Include="Source\Core\Properties\Vec3Property.h" />
     <ClInclude Include="Source\Core\Properties\Vec4Property.h" />
+    <ClInclude Include="Source\Core\Properties\VisibilityProperty.h" />
     <ClInclude Include="Source\Core\Rectangle.h" />
+    <ClInclude Include="Source\Core\RectangleGeometry.h" />
+    <ClInclude Include="Source\Core\Renderer.h" />
     <ClInclude Include="Source\Core\Setter.h" />
     <ClInclude Include="Source\Core\Properties\StringProperty.h" />
     <ClInclude Include="Source\Core\Shape.h" />
@@ -71,9 +84,18 @@
     <ClCompile Include="Source\Core\Application.cpp" />
     <ClCompile Include="Source\Core\Binding.cpp" />
     <ClCompile Include="Source\Core\Button.cpp" />
+    <ClCompile Include="Source\Core\CairoRenderer.cpp" />
+    <ClCompile Include="Source\Core\CombinedGeometry.cpp" />
+    <ClCompile Include="Source\Core\DependencyObject.cpp" />
     <ClCompile Include="Source\Core\Element.cpp" />
+    <ClCompile Include="Source\Core\Ellipse.cpp" />
+    <ClCompile Include="Source\Core\EllipseGeometry.cpp" />
     <ClCompile Include="Source\Core\FontFamily.cpp" />
     <ClCompile Include="Source\Core\FontManager.cpp" />
+    <ClCompile Include="Source\Core\Geometry.cpp" />
+    <ClCompile Include="Source\Core\LineGeometry.cpp" />
+    <ClCompile Include="Source\Core\Path.cpp" />
+    <ClCompile Include="Source\Core\PathGeometry.cpp" />
     <ClCompile Include="Source\Core\Properties\ContentProperty.cpp" />
     <ClCompile Include="Source\Core\Control.cpp" />
     <ClCompile Include="Source\Core\ControlTemplate.cpp" />
@@ -81,6 +103,9 @@
     <ClCompile Include="Source\Core\Properties\FontProperty.cpp" />
     <ClCompile Include="Source\Core\Properties\MarginProperty.cpp" />
     <ClCompile Include="Source\Core\Properties\StringProperty.cpp" />
+    <ClCompile Include="Source\Core\Rectangle.cpp" />
+    <ClCompile Include="Source\Core\RectangleGeometry.cpp" />
+    <ClCompile Include="Source\Core\Shape.cpp" />
     <ClCompile Include="Source\Core\Text.cpp" />
     <ClCompile Include="Source\Core\Window.cpp" />
     <ClCompile Include="Source\main.cpp" />
@@ -124,9 +149,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\bin\src\cairo-1.12.16\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>Lib/Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cairo.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

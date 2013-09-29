@@ -2,16 +2,24 @@
 
 #include "Properties.h"
 
-namespace Ir
-{
+namespace Ir {
+	class Element;
+
 	class ControlTemplate : public Object {
 	public:
-		ContentProperty Content;
+		ControlTemplate(Object* parent);
 
 	public:
-		ControlTemplate(Object* parent)
-			: Object(parent) {
-			INIT_PROPERTY( Content );
-		}
+		Element const* getRoot() const { return _root; }
+
+		Element* getRoot() { return _root; }
+
+		void setRoot(Element* root) { _root = root; }
+
+	public:
+		Element* CreateInstance() const;
+
+	private:
+		Element* _root;
 	};
 }

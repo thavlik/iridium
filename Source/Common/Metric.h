@@ -4,13 +4,13 @@ namespace Ir {
 	class Metric {
 	public:
 		enum {
-			Percentage,
-			Units,
-			Auto
+			UNSET,
+			PERCENT,
+			UNITS
 		};
 
 		Metric()
-			: _type(Metric::Auto)
+			: _type(Metric::UNSET)
 			, _amount(0.0f) { }
 
 		Metric(int type, float amount)
@@ -18,9 +18,9 @@ namespace Ir {
 			, _amount(amount) { }
 
 	public:
-		static Metric FromUnits(float amount) { return Metric(Metric::Units, amount); }
+		static Metric FromUnits(float amount) { return Metric(Metric::UNITS, amount); }
 
-		static Metric FromPercentage(float amount) { return Metric(Metric::Percentage, amount); }		
+		static Metric FromPercentage(float amount) { return Metric(Metric::PERCENT, amount); }		
 
 	public:
 		int getType() const { return _type; }
@@ -29,6 +29,7 @@ namespace Ir {
 
 	private:
 		int _type;
+
 		float _amount;
 	};
 }

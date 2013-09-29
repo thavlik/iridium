@@ -1,0 +1,13 @@
+add_subdirectory (Common)
+add_subdirectory (Core)
+add_subdirectory (Presentation)
+
+add_executable (IridiumTest main.cpp)
+
+link_directories (${IRIDIUM_BINARY_DIR}/Common)
+link_directories (${IRIDIUM_BINARY_DIR}/Core)
+link_directories (${IRIDIUM_BINARY_DIR}/Presentation)
+
+target_link_libraries (IridiumTest IrCommon)
+target_link_libraries (IridiumTest IrCore)
+target_link_libraries (IridiumTest IrPresentation)

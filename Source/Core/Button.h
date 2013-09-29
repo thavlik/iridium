@@ -2,11 +2,12 @@
 
 #include "Control.h"
 
-namespace Ir
-{
+namespace Ir {
 	class Button : public Control {
 	public:
 		Button(Object* parent);
+
+	protected:
 
 	private:
 	};

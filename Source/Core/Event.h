@@ -38,22 +38,18 @@ namespace Ir
 	};
 
 	template<class ArgTy = EventObject*>
-	class Event
-	{
+	class Event {
 	public:
-		void operator()(ArgTy arg)
-		{
+		void operator()(ArgTy arg) {
 			for(unsigned i = 0; i < _subscribers.size(); ++i)
 				_subscribers[i](arg);
 		}
 
-		void operator+=(Subscriber<ArgTy> s)
-		{
+		void operator+=(Subscriber<ArgTy> s) {
 			_subscribers.push_back(s);
 		}
 
-		void operator-=(Subscriber<ArgTy> s)
-		{
+		void operator-=(Subscriber<ArgTy> s) {
 			_subscribers.erase(std::find(_subscribers.begin(), _subscribers.end(), s));
 		}
 

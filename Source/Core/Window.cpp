@@ -6,8 +6,8 @@ namespace Ir
 	Window::Window(Object* parent, const char* title, int x, int y, int width, int height)
 		: Control(parent)
 	{
-		INIT_PROPERTY( Title ) = title;
-		INIT_PROPERTY( X ) = x;
-		INIT_PROPERTY( Y ) = y;
+		CONTROL_PROPERTY( AFFECTS_RENDERING, Title ) = title;
+		CONTROL_PROPERTY( AFFECTS_RENDERING, X ) = x;
+		CONTROL_PROPERTY( AFFECTS_RENDERING, Y ) = y;
 	}
 }
